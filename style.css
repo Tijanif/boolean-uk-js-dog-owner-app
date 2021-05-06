@@ -105,7 +105,10 @@ img {
 .main__dog-section h2 {
   margin: 1rem 0;
 }
-
+/* img {
+  width: 400;
+  height: 300;
+} */
 .main__dog-section img {
   margin-bottom: 1rem;
   border-radius: 5px;
