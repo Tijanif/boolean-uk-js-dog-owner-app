@@ -39,6 +39,7 @@ dogDiv.append(dogDivH3El,dogDivPEl)
 
 // Dog Img 
 const dogImg = document.createElement('img')
+dogImg.setAttribute("style", "width:400px; height:300px")
 
 // Dog button
 const dogDivButton = document.createElement('div')
