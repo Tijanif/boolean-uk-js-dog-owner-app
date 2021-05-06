@@ -78,11 +78,11 @@ function renderDogNav (dog) {
  }
 
 
-let badDog = {
-  goodBoi: true,
-  goodDog: 'Good Dog',
-  badDog: 'Bad Dog'
-}
+// let badDog = {
+//   goodBoi: true,
+//   goodDog: 'Good Dog',
+//   badDog: 'Bad Dog'
+// }
  function addDogToCard (dog) {
   dogNameh2El.innerText = dog.name
    dogImg.src = dog.image
@@ -96,7 +96,7 @@ let badDog = {
  dogDivButtonEl.addEventListener('click', function(){
   if(dogDivButtonEl.innerText === 'Good Dog'){
     dogDivButtonEl.innerText = 'Bad Dog'
-   dogDivButtonSpanEl.innerText = 'Yes'
+   dogDivButtonSpanEl.innerText = ' Yes'
   } else {
      dogDivButtonSpanEl.innerText = ' No'
   dogDivButtonEl.innerText = 'Good Dog'
@@ -124,4 +124,32 @@ let badDog = {
   //     </form>
   // </section>
 
-  
+  //  Dog Form section
+  const dogFormSection = document.createElement('section')
+  dogFormSection.setAttribute('class', 'main__dog-section')
+ 
+// Dog form h1 
+const dogFormH2El = document.createElement('h2')
+dogFormH2El.innerText = "Add a new Dog"
+
+// Dog Form 
+const dogForm = document.createElement('form')
+dogForm.setAttribute('class', 'form')
+
+// Label for name
+const dogLabelName = document.createElement('label')
+dogLabelName.setAttribute("for", 'name')
+dogLabelName.innerText = `Dog's name`
+
+// Label for image
+const dogLabelImg = document.createElement('label')
+dogLabelImg.setAttribute("for", 'image')
+dogLabelImg.innerText = `Dog's Picture`
+
+// Label for bio
+const dogLabelbio = document.createElement('label')
+dogLabelbio.setAttribute("for", 'bio')
+dogLabelbio.innerText = `Dog's bio`
+
+dogFormSection.append(dogFormH2El, dogForm)
+console.log(dogLabelName)
