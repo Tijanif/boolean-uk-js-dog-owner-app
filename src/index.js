@@ -142,15 +142,43 @@ const dogLabelName = document.createElement('label')
 dogLabelName.setAttribute("for", 'name')
 dogLabelName.innerText = `Dog's name`
 
+// Input name
+const inputName = document.createElement('input')
+inputName.setAttribute("type", 'text')
+inputName.setAttribute('id', 'name')
+inputName.setAttribute('name', 'name')
+
+
 // Label for image
 const dogLabelImg = document.createElement('label')
 dogLabelImg.setAttribute("for", 'image')
 dogLabelImg.innerText = `Dog's Picture`
+
+// Input img
+const inputImg = document.createElement('input')
+inputImg.setAttribute("type", 'url')
+inputImg.setAttribute('id', 'image')
+inputImg.setAttribute('name', 'image')
 
 // Label for bio
 const dogLabelbio = document.createElement('label')
 dogLabelbio.setAttribute("for", 'bio')
 dogLabelbio.innerText = `Dog's bio`
 
+// Input Textarea
+const inputTextarea = document.createElement('textarea')
+inputTextarea.setAttribute('rows',"5")
+inputTextarea.setAttribute('id', 'bio')
+inputTextarea.setAttribute('name', 'bio')
+
+// Input Submit
+const inputSubmit = document.createElement('imput')
+inputSubmit.setAttribute('type', 'submit')
+inputSubmit.setAttribute('id', 'submit')
+inputSubmit.setAttribute('name', 'submit')
+inputSubmit.setAttribute('value', `Let's add a dog!`)
+inputSubmit.setAttribute('class', 'form__button')
+
 dogFormSection.append(dogFormH2El, dogForm)
-console.log(dogLabelName)
+dogForm.append(dogLabelName,inputName,dogLabelImg,inputImg,dogLabelbio,inputTextarea,inputSubmit)
+console.log(dogLabelName, dogForm)
