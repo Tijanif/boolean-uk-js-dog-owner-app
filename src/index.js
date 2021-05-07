@@ -67,6 +67,7 @@ function renderDogNav (dog) {
 
       listItem.addEventListener('click', function () {
    
+       renderDogNav.innerHTML = ''
   addDogToCard(dog)
 
   
@@ -79,19 +80,19 @@ function renderDogNav (dog) {
  }
 
 
-// let badDog = {
-//   goodBoi: true,
-//   goodDog: 'Good Dog',
-//   badDog: 'Bad Dog'
-// }
+
  function addDogToCard (dog) {
+  dogSection.innerHTML = "";
+  dogSection.append(dogNameh2El,dogImg,dogDivH3El,dogDivPEl,dogDivButtonEmEl,dogDivButtonSpanEl,dogDivButtonEl)
+
   dogNameh2El.innerText = dog.name
    dogImg.src = dog.image
    dogDivH3El.innerText = 'Bio'
    dogDivPEl.innerText = dog.bio
-   dogDivButtonEmEl.innerText = 'Is it bad? '
+   dogDivButtonEmEl.innerText = "is naughty?"
   dogDivButtonSpanEl.innerText = ' No'
   dogDivButtonEl.innerText = 'Good Dog'
+  
  }
 
  dogDivButtonEl.addEventListener('click', function(){
@@ -106,25 +107,9 @@ function renderDogNav (dog) {
  })
 
 
-  //   This is a template for the add dog form
 
-  //   <section class="main__dog-section">
-  //     <h2>Add a new Dog</h2>
-  //     <form class="form">
 
-  //       <label for="name">Dog's name</label>
-  //       <input type="text" id="name" name="name">
-
-  //       <label for="image">Dog's picture</label>
-  //       <input type="url" id="image" name="image">
-
-  //       <label for="bio">Dog's bio</label>
-  //       <textarea rows="5" id="bio" name="bio"></textarea>
-
-  //       <input type="submit" id="submit" name="submit" value="Let's add a dog!" class="form__button">
-  //     </form>
-  // </section>
-
+ 
   //  Dog Form section
   const dogFormSection = document.createElement('section')
   dogFormSection.setAttribute('class', 'main__dog-section')
@@ -172,7 +157,7 @@ inputTextarea.setAttribute('id', 'bio')
 inputTextarea.setAttribute('name', 'bio')
 
 // Input Submit
-const inputSubmit = document.createElement('imput')
+const inputSubmit = document.createElement('input')
 inputSubmit.setAttribute('type', 'submit')
 inputSubmit.setAttribute('id', 'submit')
 inputSubmit.setAttribute('name', 'submit')
@@ -181,4 +166,16 @@ inputSubmit.setAttribute('class', 'form__button')
 
 dogFormSection.append(dogFormH2El, dogForm)
 dogForm.append(dogLabelName,inputName,dogLabelImg,inputImg,dogLabelbio,inputTextarea,inputSubmit)
-console.log(dogLabelName, dogForm)
+  
+  
+// getting the add dog element
+const addDogEl = document.querySelector('.dogs-list__button--add')
+
+console.log(dogForm)
+dogDiv
+addDogEl.addEventListener('click', function(){
+ 
+ dogSection.innerHTML = ""
+ dogSection.append(dogFormSection)
+ 
+})
