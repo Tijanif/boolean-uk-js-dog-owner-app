@@ -152,7 +152,7 @@ dogLabelbio.innerText = `Dog's bio`
 
 // Input Textarea
 const inputTextarea = document.createElement('textarea')
-inputTextarea.setAttribute('rows',"5")
+inputTextarea.setAttribute('rows',"7")
 inputTextarea.setAttribute('id', 'bio')
 inputTextarea.setAttribute('name', 'bio')
 
