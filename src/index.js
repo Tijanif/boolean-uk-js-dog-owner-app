@@ -82,15 +82,15 @@ function renderDogNav (dog) {
 
 
  function addDogToCard (dog) {
-  dogSection.innerHTML = "";
+  dogSection.innerHTML = ""
   dogSection.append(dogNameh2El,dogImg,dogDivH3El,dogDivPEl,dogDivButtonEmEl,dogDivButtonSpanEl,dogDivButtonEl)
 
   dogNameh2El.innerText = dog.name
    dogImg.src = dog.image
    dogDivH3El.innerText = 'Bio'
    dogDivPEl.innerText = dog.bio
-   dogDivButtonEmEl.innerText = "is naughty?"
-  dogDivButtonSpanEl.innerText = ' No'
+   dogDivButtonEmEl.innerText = "is naughty? "
+  dogDivButtonSpanEl.innerText = 'No'
   dogDivButtonEl.innerText = 'Good Dog'
   
  }
